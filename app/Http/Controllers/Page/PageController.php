@@ -7,61 +7,23 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function dashboard(Request $request){
-        return view('dashboard');
+    public function index(Request $request){
+        return view('page.index');
+    }
+    public function blogPost(Request $request){
+        return view('page.blog-post');
     }
     public function login(Request $request){
-        return view('authentications.login');
-    }
-    public function password(Request $request){
-        return view('authentications.password');
+        return view('page.login');
     }
     public function register(Request $request){
-        return view('authentications.register');
+        return view('page.register');
     }
-    public function withoutmenu(Request $request){
-        return view('layout.withoutmenu');
+    public function password(Request $request){
+        return view('page.register');
     }
-    public function withoutnarbar(Request $request){
-        return view('layout.withoutnarbar');
+    public function dasboard(Request $request){
+        return view('category.dasboard');
     }
-    public function withoutcontainer(Request $request){
-        return view('layout.withoutcontainer');
-    }
-    public function fluid(Request $request){
-        return view('layout.fluid');
-    }
-    public function blank(Request $request){
-        return view('layout.blank');
-    }
-    public function accounts(Request $request){
-        return view('account.accounts');
-    }
-    public function notifications(Request $request){
-        return view('account.notifications');
-    }
-    public function connections(Request $request){
-        return view('account.connections');
-    }
-    public function error(Request $request){
-        return view('misc.error');
-    }
-    public function undermaintenance(Request $request){
-        return view('misc.undermaintenance');
-    }
-    public function basicinputs(Request $request){
-        return view('formelements.basicinputs');
-    }
-    public function inputgroups(Request $request){
-        return view('formelements.inputgroups');
-    }
-    public function verticalform(Request $request){
-        return view('formlayouts.verticalform');
-    }
-    public function horizontalform(Request $request){
-        return view('formlayouts.horizontalform');
-    }
-    public function tables(Request $request){
-        return view('tables');
-}
+
 }
